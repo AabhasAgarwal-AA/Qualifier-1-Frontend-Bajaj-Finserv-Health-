@@ -10,39 +10,6 @@
     <div class="employee">
       <h2><%= employee.name %></h2>
       <p><strong>Designation:</strong> <%= employee.designation || 'Not available' %></p>
-
-      <h3>Skills:</h3>
-      <ul>
-        <% employee.skills.forEach(function(skill) { %>
-          <li><%= skill %></li>
-        <% }) %>
-      </ul>
-
-      <h3>Projects:</h3>
-      <% employee.projects.forEach(function(project) { %>
-        <div class="project">
-          <h4><%= project.name %></h4>
-          <p><%= project.description %></p>
-
-          <h5>Team:</h5>
-          <ul>
-            <% project.team.forEach(function(member) { %>
-              <li><strong>Name:</strong> <%= member.name || 'Not available' %>, <strong>Role:</strong> <%= member.role %></li>
-            <% }) %>
-          </ul>
-
-          <h5>Tasks:</h5>
-          <ul>
-            <% project.tasks.forEach(function(task) { %>
-              <li>
-                <strong>ID:</strong> <%= task.id %>,
-                <strong>Name:</strong> <%= task.name || 'Not available' %>,
-                <strong>Status:</strong> <%= task.status || 'Not available' %>
-              </li>
-            <% }) %>
-          </ul>
-        </div>
-      <% }) %>
     </div>
   <% }) %>
 </body>
